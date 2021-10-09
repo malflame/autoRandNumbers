@@ -1,5 +1,6 @@
 (defun rnd (/)
   (if (not seed)
+  
     (setq seed (getvar "DATE"))
   )
   (setq mod 65536; module
