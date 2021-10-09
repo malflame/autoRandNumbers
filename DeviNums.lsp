@@ -1,16 +1,15 @@
 (defun rnd (/)
   (if (not seed)
-  
-    (setq seed (getvar "DATE"))
+      (setq seed (getvar "DATE")); get date
   )
   (setq mod 65536; module
         mult 25173; multiplicator
         inc 13849; increment
-        seed (rem (+ (* mult seed) inc) mod)
+        seed (rem (+ (* mult seed) inc) mod); easy
         random (/ seed mod)
   )
 );defun rnd
-(defun rndRange(/)
+(defun rndRange(/); generate numbers in range -10..10
   (setq maxR 20; range
 	movR 10; move
   )
